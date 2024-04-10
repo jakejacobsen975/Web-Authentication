@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mysteries of Forgotten Paths</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <h1>The Mysteries of Forgotten Paths</h1>
+        <p>Enter commands to solve the mystery!</p>
+        
+    </header>
+    <div id="error-message">
+        <p id="error-message-paragraph"></p>
+    </div>
+    <div id="signin-message">
+        <p id="signin-message-paragraph"></p>
+    </div>
+    <div id="user-form">
+
+        <div>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" required class="form-data" autocomplete="given-name" />
+        </div>
+        <div>
+            <label for="last_name">Last Name:</label><br>
+            <input type="text" id="last_name" required class="form-data">
+        </div>
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" required class="form-data" autocomplete="off">
+        </div>
+        <div>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" required class="form-data">
+        </div>
+        <div class="form-group">
+            <button type="submit" class = "buttonstyle" id="new-user">Create Account</button>
+        </div>
+        <div class="form-group">
+            <button type="submit" class = "buttonstyle" id="existing-user">Login</button>
+        </div>
+    </div>
+    <div id="user-login" style="display: none;">
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="text" id="login-email" required class="form-data">
+        </div>
+        <div>
+            <label for="password">Password:</label><br>
+            <input type="password" id="login-password" required class="form-data">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="buttonstyle" id="login-button">Login</button>
+        </div>
+    </div>    
+    <div id="create-player" style="display: none;">
+        <p id="create-message">Welcome to the Mystery-Themed Website. Create a character and choose a scenario to explore.</p>
+        <section class="user-details">
+            <div id="user-form">
+                <div class="form-group">
+                    <label for="player-name">Name:</label>
+                    <input type="text" id="player-name" required class="form-data">
+                </div>
+                
+                <div class="form-group">
+                    <label for="player-gender">Gender:</label>
+                    <select id="player-gender" class="form-data">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="player-adventure-type">Adventure Type:</label>
+                    <select id="player-adventure-type" class="form-data">
+                        <option value="haunted mansion">haunted mansion</option>
+                        <option value="lone hiker">lone hiker</option>
+                        <option value="abandoned town">abandoned town</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class = "buttonstyle" id="submit-button">Start Adventure</button>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class = "buttonstyle" id="logout">Logout</button>
+                </div>
+            </div>
+    </div>
+    
+    <div id="game-section" style="display: none;">
+        <p id="message"></p>
+         <section class="message-input">
+             <p id="room-message"></p>
+             <p>Enter a Command:</p>
+             <input type="text" id="command-input" placeholder="Type your command here" required class="form-data">
+             <button id="command-submit-button" class = "buttonstyle">Submit</button>
+         </section>
+         <div class="form-group">
+            <button type="submit" class = "buttonstyle" id="create">Main Menu</button>
+        </div>
+    </div>
+    <div id="editForm" style="display: none;">
+        <h2>Edit your player:</h2>
+        <label for="newName">New Name:</label>
+        <input type="text" id="newName" >
+    
+        <label for="gender">Gender:</label>
+        <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+    
+        <button id="submitchanges">&#x2714;</button>
+        <button id="cancel">&#x2716;</button>
+    </div>
+        </section>
+            
+        <div class="player-list" id="player-list-block" style="display: none;">
+            <h2>Players:</h2>
+            <ul id="player-list" class="player-container"></ul>
+        </div>
+    
+
+    <script src="app.js"></script> 
+</body>
+</html>
+
+ 
+

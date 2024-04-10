@@ -1,0 +1,155 @@
+
+.default-background {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('dark\ forrest.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hauntedmansion {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('haunted\ mansion.jpg');
+    background-position: center 20%;
+    background-repeat: no-repeat;
+}
+
+.lonehiker {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('lone\ hiker.jpg');
+   
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.abandonedtown {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('town.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #f8eaea;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header, .message-input, #message, #create-message, .user-form{
+    background-color: #33333393;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+main {
+    margin: 0 auto;
+    padding: 20px;
+}
+.bold-label {
+    font-weight: bold;
+    color: black;
+}
+
+.buttonstyle {
+    display: block; 
+    margin: 5px auto ; 
+    padding: 10px;
+    background-color: #ff6600; 
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+.loadbutton, .deletebutton, .editbutton{
+    background-color: #ff6600; 
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin:1px auto;
+    display: block; 
+}
+
+.buttonstyle:hover, .loadbutton:hover, .deletebutton:hover, .editbutton:hover{
+    background-color: #ff3300; 
+}
+#editForm{
+    background-color: #555555b2;
+    position: center;
+    width:340px;
+    height: 300px;
+    margin: 0 auto;
+     
+}
+#user-form { 
+    text-align: center; 
+}
+#error-message{
+    background-color: red;
+    margin: auto;
+    max-width: 220px;
+}
+#signin-message{
+    background-color: green;
+    margin: auto;
+    max-width: 220px;
+}
+.form-group {
+    margin-bottom: 10px; 
+}
+
+.playerinside {
+    font-weight: bold;
+}
+.player-list {
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+.player-list div {
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    display: inline-block;
+    background-color: #2e2c2cbb;
+}
+.player-list  {
+    list-style: none;
+}
+
+.form-data, #gender, #newName {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    background-color: #333333ab;
+    color: #ffffff;
+}
+#submitchanges,#cancel{
+    margin: 5px;
+    padding: 5px;
+}

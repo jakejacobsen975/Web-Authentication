@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+import sqlite3
+conn = sqlite3.connect('database.db')
+c = conn.cursor()
+
+# Insert some example posts
+c.execute("INSERT INTO currentPlayer (current_player) VALUES (?)",(0,))
+c.execute("INSERT INTO rooms (name,message,right_room_id,left_room_id) VALUES (?,?,?,?)", ('haunted mansion','Five adventurous friends decide to explore a creepy, long-abandoned house on a moonless night. They enter the dark and creaky house armed with flashlights. As they venture deeper into the house, strange things start happening. Doors slam shut on their own, ghostly whispers echo through the halls, and eerie apparitions appear. It becomes clear that the house is haunted, and the friends must uncover the houses dark secrets to escape.',4,5))
+c.execute("INSERT INTO rooms (name,message,right_room_id,left_room_id) VALUES (?,?,?,?)", ('lone hiker',"Five adventurous friends decide to explore a creepy, long-abandoned house on a moonless night. They enter the dark and creaky house armed with flashlights. As they venture deeper into the house, strange things start happening. Doors slam shut on their own, ghostly whispers echo through the halls, and eerie apparitions appear. It becomes clear that the house is haunted, and the friends must uncover the house's dark secrets to escape.",4,5))
+c.execute("INSERT INTO rooms (name,message,right_room_id,left_room_id) VALUES (?,?,?,?)", ('abandoned town',"A small, remote village suddenly disappears from all maps and records. Investigative journalists visit the last known location of the village to unravel the mystery. They find eerie remnants of the vanished community and must piece together what happened to the people and the village itself.",4,5))
+
+# Create the initial rooms for the "haunted mansion" storyline
+c.execute("INSERT INTO rooms (name, message, right_room_id, left_room_id) VALUES (?, ?, ?, ?)", ('main entrance', 'You enter a large, old, and dilapidated mansion shrouded in darkness. The air is heavy with an eerie presence, and you can hear the faint sound of whispers. As you venture further into the mansion, you sense something isn\'t right.', 5, 6))#4
+c.execute("INSERT INTO rooms (name, message, right_room_id, left_room_id) VALUES (?, ?, ?, ?)", ('creepy corridor', 'You enter a long, dimly lit corridor filled with eerie portraits and flickering candles. You can hear distant whispers and footsteps, and the air is ice-cold. As you walk further, the corridor seems to never end.', 7, 8))#5
+c.execute("INSERT INTO rooms (name, message, right_room_id, left_room_id) VALUES (?, ?, ?, ?)", ('hidden library', 'You discover a hidden library filled with ancient, dusty books and mysterious artifacts. Some books seem to contain spells and rituals, while others tell stories of the house\'s history. Find a way to uncover the secrets within.', 9, 10))#6
+c.execute("INSERT INTO rooms (name, message, right_room_id, left_room_id) VALUES (?, ?, ?, ?)", ('dining room', 'A grand dining room with a long table covered in rotting food awaits you. The spirits of the past occupants may have one last banquet to share. Is there something hidden here that can help you escape the haunted mansion?', 11, 12))#7
+
+# Continue the story within the haunted mansion
+c.execute("INSERT INTO rooms (name, message, right_room_id, left_room_id) VALUES (?, ?, ?, ?)", ('cellar entrance', "A narrow staircase leads down to the dark and damp cellar. Mysterious sounds echo from below. As you descend, you'll need to make choices that could determine your fate.", 13, 14))#8
+c.execute("INSERT INTO rooms (name, message, right_room_id, left_room_id) VALUES (?, ?, ?, ?)", ('underground passage', 'You find an entrance to an underground passage. The walls are covered in strange symbols and dimly lit torches. The passage leads to a crypt with forgotten secrets. Can you uncover the truth?', 15, 16))#9
+c.execute("INSERT INTO rooms (name, message, right_room_id, left_room_id) VALUES (?, ?, ?, ?)", ('attic', "You climb up to the attic filled with old belongings and mysterious objects. An antique mirror reflects an eerie figure. What lies in the attic could hold the key to breaking the mansion's curse.", 17, 18))#10
+c.execute("INSERT INTO rooms (name, message, right_room_id, left_room_id) VALUES (?, ?, ?, ?)", ('final room', "You reach the final room of the haunted mansion. It's shrouded in darkness, and an ominous presence lingers. The key to your escape awaits, but you must face the mansion's darkest secrets.", 4, 4))#11
+
+# Loop back to earlier rooms
+c.execute("INSERT INTO rooms (name, message, right_room_id, left_room_id) VALUES (?, ?, ?, ?)", ('return to corridor', 'You return to the dimly lit corridor. Whispers continue to surround you. It seems as though the corridor has shifted since your last visit.', 6, 7))#12
+c.execute("INSERT INTO rooms (name, message, right_room_id, left_room_id) VALUES (?, ?, ?, ?)", ('return to hidden library', 'Back in the hidden library, you realize there may be undiscovered secrets within its shelves. Can you find the key to your escape among the dusty tomes?', 8, 9))#13
+c.execute("INSERT INTO rooms (name, message, right_room_id, left_room_id) VALUES (?, ?, ?, ?)", ('return to dining room', 'You find yourself back in the grand dining room. The banquet table is still set, and the spirits of the past occupants await your decision.', 10, 11))#14
+
+
+conn.commit()
