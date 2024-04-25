@@ -1,5 +1,5 @@
 # The Mysteries of Forgotten Paths
-## not all of the code is shown and working because it is apart of an active class but I have shown as much as I can
+## Not all of the code is shown and working because it is apart of an active class but I have shown as much as I can
 
 ![Screenshot 2024-04-09 191701](https://github.com/jakejacobsen975/Web-Authentication/assets/122470500/5b69a183-19c0-4ce2-a43a-eecebbbb95e5)
 
